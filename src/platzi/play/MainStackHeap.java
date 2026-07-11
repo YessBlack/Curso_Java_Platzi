@@ -11,9 +11,9 @@ public class MainStackHeap {
         // Cualquier cambio que haga en esas dos queda en ambos
         reyLeon = harryPotter;
 
-        reyLeon.titulo = "El Hobbit";
+        reyLeon.setTitulo("El Hobbit");
 
-        System.out.println(reyLeon.titulo);
-        System.out.println(harryPotter.titulo);
+        System.out.println(reyLeon.getTitulo());
+        System.out.println(harryPotter.getTitulo());
     }
 }

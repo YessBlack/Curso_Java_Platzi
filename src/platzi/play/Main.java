@@ -1,14 +1,12 @@
 package platzi.play;
 
+import Plataforma.Plataforma;
 import platzi.play.contenido.Pelicula;
 import platzi.play.plataforma.Usuario;
 import util.ScannerUtils;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Scanner;
-
 public class Main {
+    public static final String NOMBRE_PLATAFORMA = "PLATZI - PLAY";
     public static void main(String[] args) {
         System.out.println("Platzi Play 🍿");
 
@@ -30,11 +28,17 @@ public class Main {
         double calificacion = ScannerUtils.capturarDecimal("Calificación");
 
         Pelicula pelicula = new Pelicula(titulo, duracion, genero, calificacion);
+        Usuario usuario = new Usuario("jhon@doe.com", "Jhon");
+        Pelicula pelicula1 = new Pelicula("El Hobbit", 200, "Fantasia", 4.8);
 
         System.out.println(pelicula.obtenerFichaTecnica());
 
-        Usuario usuario = new Usuario("jhon@doe.com", "Jhon");
-
         usuario.ver(pelicula);
+
+        Plataforma plataforma = new Plataforma(NOMBRE_PLATAFORMA);
+        plataforma.agregar(pelicula);
+        plataforma.agregar(pelicula1);
+        plataforma.mostrarTitulos();
+        System.out.println("Numero de Elementos de la plataforma " + plataforma.getContenido().size());
     }
 }

@@ -5,14 +5,14 @@ public class MainStackHeap {
         Pelicula reyLeon = new Pelicula("El Rey Leon", 135, "animada", 4.5);
         Pelicula harryPotter = new Pelicula("Harry Potter", 200, "fantasia", 4.8);
 
-        System.out.println("Pelicula Rey Leon " + reyLeon.titulo);
-        System.out.println("Pelicula Harry Potter " + harryPotter.titulo);
+        System.out.println("Pelicula Rey Leon " + reyLeon.getTitulo());
+        System.out.println("Pelicula Harry Potter " + harryPotter.getTitulo());
 
         reyLeon = harryPotter;
-        reyLeon.titulo = "El Hobbit";
+        reyLeon.setTitulo("El Hobbit");
 
         System.out.println("Cambios");
-        System.out.println("Pelicula Rey Leon: " + reyLeon.titulo);
-        System.out.println("Pelicula Harry Potter: " + harryPotter.titulo);
+        System.out.println("Pelicula Rey Leon: " + reyLeon.getTitulo());
+        System.out.println("Pelicula Harry Potter: " + harryPotter.getTitulo());
     }
 }
